@@ -1,0 +1,7 @@
+<% @routes.each do |route| %>
+  <% route_path = route.path.spec.to_s.sub("(.:format)", "")
+     next if route_path =~ /\.json$/ %>
+  <h3 class='endpoint'>
+    <%= route.verb %> <%= route_path %>
+  </h3>
+<% end %>

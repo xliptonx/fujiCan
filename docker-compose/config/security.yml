@@ -1,0 +1,8 @@
+production: &default
+  encryption_key: <%= ENV["ENCRYPTION_KEY"] %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
